@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+
+ @import "bootstrap";
+
+ul{
+    margin: 0; 
+    padding:0;
+  }
+
+#nav-bar{
+    background-color: black;
+    // border: solid blue 2px;
+}
+
+#nav-bar ul{
+    display: flex;
+}
+
+#nav-bar li {
+    list-style: none;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+.nav-bar__link{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+#hero {
+    background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg2-small.jpg");
+    background-color: #464646;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center ;
+    background-attachment: fixed;
+    height: 100vh;
+}; 
+
+#hero-text{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+
+}
+@media screen and (min-width: 767px) {
+    #hero {
+        background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg2.jpg");
+    };       
+}    
+
+
+
+
+
+
+
+
+footer{
+    margin-top:500px;
+};
