@@ -24,6 +24,13 @@ body{
     background-color: #060b1a;
 }
 
+.align-left{
+    text-align: left;
+}
+.align-right{
+    text-align: right;
+}
+
 #nav-bar{
     background-color: rgb(34, 34, 34);
     // border: solid blue 2px;
@@ -79,8 +86,8 @@ body{
 }
 
 .name{
-    font-size: 5.75rem;
-    font-family: 'rock salt', cursive ;
+    font-size: 5rem;
+    font-family: 'rock salt', cursive;
 }
 
 
@@ -129,12 +136,92 @@ body{
 
 
 
+.section-head{
+    font-size: 3rem;
+    text-align: left;
+}
+#about {
+    padding: 3rem 1.5rem;
+    color: white;
+    font-family: "caveat", cursive;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+#about h3{
+    font-size: 5rem;
+    color: rgb(168, 217, 250);
+}
+.section-text{
+    font-size: 2rem;
+    font-family: "oswald", cursive;
+    text-align: right;
+}
+#about p span{
+    font-family: "rock salt", cursive;
+    color: red;
+
+}
+
+.faded-text{
+    font-family: "rock salt", cursive;
+    color: rgba(255, 255, 255, 0.212);
+    font-size: 2rem;
+}
+
+#projects{
+background-color: aliceblue;
+padding: 3rem 1.5rem;
+font-family: "caveat", cursive;
+text-align: center;
+width: 100%;
+margin: auto;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+}
+.single-project{
+    width: 80vw;
+    height: 45vh;
+    border-radius: 1.3rem;
+    margin: 1.5rem auto;
+}
+
+#project-1{
+    background-image: url("imgs/placeholder1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#project-2{
+    background-image: url("imgs/placeholder2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#project-3{
+    background-image: url("imgs/placeholder3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+
 
 
 @media screen and (min-width: 767px) {
     #hero {
         background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg2.jpg");
-    };       
+    };  
+    
+    #about {
+        width: 70%;
+
+    }
 }    
 
 
