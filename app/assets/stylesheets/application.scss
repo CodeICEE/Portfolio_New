@@ -20,8 +20,12 @@ ul{
     padding:0;
   }
 
+body{
+    background-color: #060b1a;
+}
+
 #nav-bar{
-    background-color: black;
+    background-color: rgb(34, 34, 34);
     // border: solid blue 2px;
 }
 
@@ -49,13 +53,84 @@ ul{
     background-position: center center ;
     background-attachment: fixed;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    
 }; 
 
-#hero-text{
-    color: white;
+.hero-text{
+    color: rgb(255, 238, 217);
     font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: -20rem;
 
 }
+
+.hero-subtext{
+    color: rgb(192, 230, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+
+.name{
+    font-size: 5.75rem;
+    font-family: 'rock salt', cursive ;
+}
+
+
+.arrow1{
+    border: solid white;
+    border-width: 0 1rem 1rem 0;
+    display: inline-block;
+    padding: 2rem;
+    animation: slidedown 3s infinite;
+    position: absolute;
+    bottom: 7rem;
+}
+.arrow2{
+    border: solid white;
+    border-width: 0 1rem 1rem 0;
+    display: inline-block;
+    padding: 2rem;
+    animation: slidedown 3s infinite;
+    position: absolute;
+    bottom: 9rem;
+}
+.arrow3{
+    border: solid white;
+    border-width: 0 1rem 1rem 0;
+    display: inline-block;
+    padding: 2rem;
+    animation: slidedown 3s infinite;
+    position: absolute;
+    bottom: 5rem;
+}
+
+    @keyframes slidedown {
+        0%{
+            opacity: 0;
+            transform: rotate(45deg) translate(-2rem, -2rem);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: rotate(45deg)  translate(2rem, 2rem);
+        }
+    }
+
+
+
+
+
+
 @media screen and (min-width: 767px) {
     #hero {
         background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg2.jpg");

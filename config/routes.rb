@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root  'pages#home'
-  get   'pages/mywork'
+  get   'pages/projects'
   get   'pages/aboutme'
   get   'pages/contactme'
   

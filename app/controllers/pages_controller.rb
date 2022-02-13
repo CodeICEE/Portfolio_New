@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     def aboutme
     end
     
-    def mywork
+    def projects
     end
 
     def contactme
