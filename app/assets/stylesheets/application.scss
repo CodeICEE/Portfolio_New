@@ -31,6 +31,7 @@ body{
     text-align: right;
 }
 
+
 #nav-bar{
     background-color: rgb(34, 34, 34);
     // border: solid blue 2px;
@@ -139,6 +140,7 @@ body{
 .section-head{
     font-size: 3rem;
     text-align: left;
+    text-transform: uppercase;
 }
 #about {
     padding: 3rem 1.5rem;
@@ -159,6 +161,7 @@ body{
 }
 #about p span{
     font-family: "rock salt", cursive;
+    padding: 0 .5rem 0 0;
     color: red;
 
 }
@@ -166,6 +169,11 @@ body{
 .faded-text{
     font-family: "rock salt", cursive;
     color: rgba(255, 255, 255, 0.212);
+    font-size: 2rem;
+}
+.faded-text-dark{
+    font-family: "rock salt", cursive;
+    color: rgba(15, 15, 15, 0.555);
     font-size: 2rem;
 }
 
@@ -178,38 +186,83 @@ width: 100%;
 margin: auto;
 }
 
-.project-container{
+.projects-container{
     display: flex;
     flex-direction: column;
+
+    
 }
 .single-project{
     width: 80vw;
     height: 45vh;
-    border-radius: 1.3rem;
+    border-radius: 1.3rem; 
     margin: 1.5rem auto;
+    position: relative;
+
 }
 
+.img-overlay{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'oswald', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s;
+    padding-top: 1rem;
+    background-color: #060b1ad7;
+    border-radius: 1.3rem;
+}
+.project-title{
+    font-size: 4rem;  
+}
+.project-description{
+    font-size: 2.5rem;
+}
+
+
+.img-overlay:hover{
+    opacity: 1;
+
+}
+
+.img-overlay > * {
+    transform: translateY(50px);
+    transition: all .3s;
+}
+
+.img-overlay:hover > * {
+    transform: translateY(0);
+}
+
+
+
 #project-1{
-    background-image: url("imgs/placeholder1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("project-imgs/portfolio.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+
 #project-2{
-    background-image: url("imgs/placeholder2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("project-imgs/mightylock.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 #project-3{
-    background-image: url("imgs/placeholder3.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("imgs/placeholder3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
-
-
-
 
 
 
@@ -220,8 +273,75 @@ margin: auto;
     
     #about {
         width: 70%;
-
     }
+    
+    .section-text{
+        text-align: center;
+    }
+
+    #projects{
+        width: 100%;
+        padding: 3rem 15%;
+    }
+    .projects-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: auto;
+    }
+    .single-project{
+        width: 31%;
+        height: 30vh;
+        border-radius: 1.3rem; 
+        margin: 1.5rem auto;
+        position: relative;
+    
+    }
+    
+    .img-overlay{
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'oswald', sans-serif;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all .3s;
+        padding-top: 1rem;
+        background-color: #060b1ad7;
+        border-radius: 1.3rem;
+    }
+    .project-title{
+        font-size: 3.5rem;  
+    }
+    .project-description{
+        font-size: 2rem;
+    }
+    
+    
+    .img-overlay:hover{
+        opacity: 1;
+    
+    }
+    
+    .img-overlay > * {
+        transform: translateY(50px);
+        transition: all .3s;
+    }
+    
+    .img-overlay:hover > * {
+        transform: translateY(0);
+    }
+    
+    
+        
+        
 }    
 
 
