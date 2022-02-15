@@ -14,16 +14,39 @@
  */
 
  @import "bootstrap";
+//---------------------custom colors-----------------------------//
 
+
+//-------------------------------misc-----------------------------------//
 ul{
     margin: 0; 
     padding:0;
-  }
+}
 
 body{
     background-color: #060b1a;
 }
+.section-head{
+    font-size: 3rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+.section-text{
+    font-size: 2rem;
+    font-family: "oswald", cursive;
+    text-align: right;
+}
 
+.faded-text{
+    font-family: "rock salt", cursive;
+    color: rgba(255, 255, 255, 0.212);
+    font-size: 2rem;
+}
+.faded-text-dark{
+    font-family: "rock salt", cursive;
+    color: rgba(15, 15, 15, 0.555);
+    font-size: 2rem;
+}
 .align-left{
     text-align: left;
 }
@@ -31,7 +54,11 @@ body{
     text-align: right;
 }
 
+.btn-custom-1{
+    background-color: wheat;
+}
 
+//--------------------------------------------nav bar -------------------------------//
 #nav-bar{
     background-color: rgb(34, 34, 34);
     // border: solid blue 2px;
@@ -52,7 +79,7 @@ body{
     text-decoration: none;
 }
 
-
+//-------------------------------------------------hero image------------------------------------//
 #hero {
     background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg2-small.jpg");
     background-color: #464646;
@@ -91,7 +118,6 @@ body{
     font-family: 'rock salt', cursive;
 }
 
-
 .arrow1{
     border: solid white;
     border-width: 0 1rem 1rem 0;
@@ -101,6 +127,7 @@ body{
     position: absolute;
     bottom: 7rem;
 }
+
 .arrow2{
     border: solid white;
     border-width: 0 1rem 1rem 0;
@@ -110,6 +137,7 @@ body{
     position: absolute;
     bottom: 9rem;
 }
+
 .arrow3{
     border: solid white;
     border-width: 0 1rem 1rem 0;
@@ -133,15 +161,7 @@ body{
             transform: rotate(45deg)  translate(2rem, 2rem);
         }
     }
-
-
-
-
-.section-head{
-    font-size: 3rem;
-    text-align: left;
-    text-transform: uppercase;
-}
+//---------------------------------------about section-----------------------------------//
 #about {
     padding: 3rem 1.5rem;
     color: white;
@@ -154,11 +174,7 @@ body{
     font-size: 5rem;
     color: rgb(168, 217, 250);
 }
-.section-text{
-    font-size: 2rem;
-    font-family: "oswald", cursive;
-    text-align: right;
-}
+
 #about p span{
     font-family: "rock salt", cursive;
     padding: 0 .5rem 0 0;
@@ -166,139 +182,60 @@ body{
 
 }
 
-.faded-text{
-    font-family: "rock salt", cursive;
-    color: rgba(255, 255, 255, 0.212);
-    font-size: 2rem;
-}
-.faded-text-dark{
-    font-family: "rock salt", cursive;
-    color: rgba(15, 15, 15, 0.555);
-    font-size: 2rem;
-}
-
-#projects{
+//-----------------------------------projects---------------------------------------//
+#projects-section{
 background-color: aliceblue;
-padding: 3rem 1.5rem;
+padding: 1.5rem 1.5rem;
 font-family: "caveat", cursive;
 text-align: center;
 width: 100%;
 margin: auto;
-}
-
-.projects-container{
-    display: flex;
-    flex-direction: column;
-
-    
-}
-.single-project{
-    width: 80vw;
-    height: 45vh;
-    border-radius: 1.3rem; 
-    margin: 1.5rem auto;
-    position: relative;
 
 }
 
-.img-overlay{
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'oswald', sans-serif;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: all .3s;
-    padding-top: 1rem;
-    background-color: #060b1ad7;
-    border-radius: 1.3rem;
-}
-.project-title{
-    font-size: 4rem;  
-}
-.project-description{
-    font-size: 2.5rem;
-}
-
-
-.img-overlay:hover{
-    opacity: 1;
-
-}
-
-.img-overlay > * {
-    transform: translateY(50px);
-    transition: all .3s;
-}
-
-.img-overlay:hover > * {
-    transform: translateY(0);
-}
-
-
-
-#project-1{
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("project-imgs/portfolio.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-#project-2{
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("project-imgs/mightylock.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-#project-3{
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("imgs/placeholder3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-
-
-@media screen and (min-width: 767px) {
-    #hero {
-        background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg2.jpg");
-    };  
-    
-    #about {
-        width: 70%;
-    }
-    
-    .section-text{
-        text-align: center;
-    }
-
-    #projects{
-        width: 100%;
-        padding: 3rem 15%;
-    }
     .projects-container{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        margin: auto;
-    }
+    display: flex;
+    flex-direction: column; 
+}
+
     .single-project{
-        width: 31%;
-        height: 30vh;
-        border-radius: 1.3rem; 
-        margin: 1.5rem auto;
-        position: relative;
-    
+    width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+}
+    .project-image{
+    height: 30vh;
+    width: 100%;
+    border-radius: .4rem .4rem 0 0;
+    display: block;
+    text-decoration: solid;
+}
+    .project-image p {
+        color: white;
+        font-size: 1.5rem;
+        text-align: right;
+        padding: 2rem;
+
     }
-    
+
+    .project-title{
+        font-size: 2.5rem;  
+    }
+
+    .project-desc{
+        border-radius: 0 0 .4rem .4rem;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.657), rgb(0, 0, 0));
+        padding: .5rem 0;
+    }
+
+    .project-desc-text{
+        font-family: "oswlad", sans-serif;;
+        font-size: 1.5rem;
+        color: white;
+    }
+
     .img-overlay{
+        display: hidden;
         color: white;
         position: absolute;
         top: 0;
@@ -307,7 +244,6 @@ margin: auto;
         height: 100%;
         font-family: 'oswald', sans-serif;
         overflow: hidden;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -315,42 +251,107 @@ margin: auto;
         transition: all .3s;
         padding-top: 1rem;
         background-color: #060b1ad7;
-        border-radius: 1.3rem;
+        border-radius: .4rem;
     }
-    .project-title{
-        font-size: 3.5rem;  
-    }
-    .project-description{
-        font-size: 2rem;
-    }
-    
-    
+
+
     .img-overlay:hover{
         opacity: 1;
-    
+
     }
-    
+
     .img-overlay > * {
         transform: translateY(50px);
         transition: all .3s;
     }
-    
+
     .img-overlay:hover > * {
         transform: translateY(0);
     }
+
+
+
+    #project-1{
+        background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0)),url("project-imgs/portfolio.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #project-2{
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("project-imgs/mightylock.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    #project-3{
+
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("imgs/placeholder3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+
+//----------------------------------------------media queries--------------------------------------//
+
+
+@media screen and (min-width: 1110px) {
+    //------------------------------------------Misc Media Query----------------------------------//
+    .section-text{
+        text-align: center;
+    }
+    //----------------------------------------Hero image media query-------------------------------//
+    #hero {
+        background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg2.jpg");
+    };  
+    //---------------------------------------- about section media query------------------------------//
+    #about {
+        width: 70%;
+    }
     
-    
+
+    //-----------------------------------projects Media Query--------------------------------------//
+    #projects-section{
+        padding: 3rem 15%;
+        //border: red solid 2px;
+    }
+        .projects-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: auto;
+            //border: green solid 2px;
+        }
+        .single-project{
+            display: flex;
+            flex-direction: column;
+            width: 31%;
+            margin: 1.5rem auto;
+            //border: blue solid 2px;
+            position: relative;
+        }
+
+        .project-desc{
+            flex-grow: 1;
+        }
+
+        .mobile{
+            display: none;
+        }
         
+        .project-title{
+            font-size: clamp(2rem, 3vw 4.5rem);  
+        }
+        .img-overlay{
+            display: flex;
+   
+        }
         
 }    
 
-
-
-
-
-
-
-
+//---------------------------------------Footer-------------------------------------//
 footer{
     margin-top:500px;
 };
