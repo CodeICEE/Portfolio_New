@@ -15,6 +15,12 @@
 
  @import "bootstrap";
 //---------------------custom colors-----------------------------//
+:root{
+    --light-blue-acc: #e0ffff;
+    --light-blue-acc2: rgb(192, 230, 255);
+    --dark-blue-main: #060b1a;
+    --off-white: wheat;
+}
 
 
 //-------------------------------misc-----------------------------------//
@@ -56,6 +62,20 @@ body{
 
 .btn-custom-1{
     background-color: wheat;
+    margin: 0 .5rem;
+    color: var(--dark-blue-main);
+    
+}
+.btn-custom-2{
+    background-color: wheat;
+    margin: 0 .5rem;
+    color: var(--dark-blue-main);
+}
+.btn-custom-1:hover{
+    background-color: var(--light-blue-acc2);
+}
+.btn-custom-2:hover{
+    background-color: var(--light-blue-acc2);
 }
 
 //--------------------------------------------nav bar -------------------------------//
@@ -168,7 +188,12 @@ body{
     font-family: "caveat", cursive;
     text-align: center;
     width: 100%;
+    height: 100vh;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 #about h3{
     font-size: 5rem;
@@ -203,20 +228,15 @@ margin: auto;
     height: auto;
     margin: 1.5rem auto;
 }
+
     .project-image{
     height: 30vh;
     width: 100%;
     border-radius: .4rem .4rem 0 0;
     display: block;
     text-decoration: solid;
+    position: relative;
 }
-    .project-image p {
-        color: white;
-        font-size: 1.5rem;
-        text-align: right;
-        padding: 2rem;
-
-    }
 
     .project-title{
         font-size: 2.5rem;  
@@ -229,9 +249,27 @@ margin: auto;
     }
 
     .project-desc-text{
-        font-family: "oswlad", sans-serif;;
+        width: 100%;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 1.5rem;
         color: white;
+        padding: 0 .5rem;
+    }
+
+    .project-overlay-cta-mobile {
+        color: white;
+        font-size: 1.5rem;
+        text-align: right;
+        padding: 2rem;
+        font-family: 'oswald', sans-serif;
+
+    }
+
+    .project-overlay-cta-large{
+        width: 50%;
+        text-align: center ;
+        font-size: 1rem;
+
     }
 
     .img-overlay{
@@ -254,7 +292,6 @@ margin: auto;
         border-radius: .4rem;
     }
 
-
     .img-overlay:hover{
         opacity: 1;
 
@@ -269,8 +306,6 @@ margin: auto;
         transform: translateY(0);
     }
 
-
-
     #project-1{
         background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0)),url("project-imgs/portfolio.png");
         background-repeat: no-repeat;
@@ -279,14 +314,15 @@ margin: auto;
     }
 
     #project-2{
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("project-imgs/mightylock.png");
+        background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0 ,0 ,0)),url("project-imgs/mightylock.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
     }
+
     #project-3{
 
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0 ,0 ,.7)),url("imgs/placeholder3.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0 ,0 ,0)),url("imgs/placeholder3.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -308,13 +344,13 @@ margin: auto;
     //---------------------------------------- about section media query------------------------------//
     #about {
         width: 70%;
+        height: 70vh;
     }
     
 
     //-----------------------------------projects Media Query--------------------------------------//
     #projects-section{
         padding: 3rem 15%;
-        //border: red solid 2px;
     }
         .projects-container{
             display: flex;
@@ -322,14 +358,12 @@ margin: auto;
             flex-wrap: wrap;
             width: 100%;
             margin: auto;
-            //border: green solid 2px;
         }
         .single-project{
             display: flex;
             flex-direction: column;
             width: 31%;
             margin: 1.5rem auto;
-            //border: blue solid 2px;
             position: relative;
         }
 
@@ -346,6 +380,9 @@ margin: auto;
         }
         .img-overlay{
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;    
    
         }
         
