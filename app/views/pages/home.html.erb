@@ -1,4 +1,7 @@
+
 <section id="hero">
+    <%= render "shared/nav" %>
+    
     <h1 class="hero-text"><span class = "name">Vlad Joseph</span></h1>
     <h1 class ="hero-subtext">Front-end web developer</h1>
     <div>
@@ -85,6 +88,25 @@
     </div>
 
     <p class="faded-text-dark align-right"> / > </p>
+</section>
+
+<section id="skills-section">
+    <p class="faded-text align-left"> < </p>
+    <h2 class = "section-head">Skills</h2>
+    <div class="skills-container">
+        <%= image_tag "skills-icons/HTML5_logo_and_wordmark.svg", alt: "logo icon for HTML5", class: "skill-logo" %>
+        <%= image_tag "skills-icons/CSS3_logo_and_wordmark.svg", alt: "logo icon for CSS3", class: "skill-logo" %>
+        <%= image_tag "skills-icons/Unofficial_JavaScript_logo_2.svg", alt: "logo icon for Javascript", class: "skill-logo" %>
+        <%= image_tag "skills-icons/Git-logo-orange.svg", alt: "logo icon for git", class: "skill-logo" %>
+        <%= image_tag "skills-icons/Github-desktop-logo-symbol.svg", alt: "logo icon for GitHub", class: "skill-logo" %>
+        <%= image_tag "skills-icons/Ruby_logo.svg", alt: "logo icon for Ruby", class: "skill-logo" %>
+        <%= image_tag "skills-icons/Ruby_On_Rails_Logo.svg", alt: "logo icon for Ruby on Rails", class: "skill-logo" %>
+    </div>
+    <p class="faded-text align-right"> / > </p>
+</section>
+
+<section id="contact">
+
 </section>
 
 
