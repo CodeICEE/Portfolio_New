@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   get   'pages/aboutme'
   get   'pages/contactme'
   get   'projects/show'
-  get   'projects/mightylock'
+  get   'projects/keyman'
   get   'projects/portfolio'
+  get   'projects/fafsa'
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

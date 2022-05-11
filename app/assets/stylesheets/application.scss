@@ -19,7 +19,7 @@
     --light-blue-acc: #e0ffff;
     --light-blue-acc2: #c0e6ff;
     --dark-blue-main: #060b1a;
-    --dark-blue-main: #242d49;
+    //--dark-blue-main: #242d49;
     --white: white;
     --off-white: wheat;
     --faded-text: #ffffff36;
@@ -186,30 +186,21 @@ hr.burgeer{
     background-color: rgb(3, 1, 19);
     top: 0;
     margin: auto;
-    transition: all 2s ease;
     animation-name: slideIn ;
-    animation-duration: 1.5s;
+    animation-duration: .8s;
+    animation-timing-function: ease-out;
     
 }
 
 @keyframes slideIn {
-    0% {left: -110vw; top:-110vw;}
-    100%{left:0; top:0;}
+    0% {left: -110vw;}
+    25%{left: -10vw;}
+    100%{left:0;}
 }
 
 .hide{
-    display: none;
-    // transition: all 2s ease;
-    // animation-name: slideOut ;
-    // animation-duration: 1.5s;
-    
+    display: none; 
 }
-
-// @keyframes slideOut {
-//     0% {left: 0; top:0; display:block;}
-//     100%{left:120vw; display: none;}
-//     }
-
 
 .show{
     display: block;
@@ -314,11 +305,11 @@ hr.burgeer{
         }
         100%{
             opacity: 0;
-            transform: rotate(45deg)  translate(2rem, 2rem);
+            transform: rotate(45deg)  translate(1.5rem, 1.5rem);
         }
     }
 
-.custom-shape-divider-bottom-1652287650 {
+.custom-shape-divider-bottom-1652303210 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -328,14 +319,14 @@ hr.burgeer{
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1652287650 svg {
+.custom-shape-divider-bottom-1652303210 svg {
     position: relative;
     display: block;
     width: calc(137% + 1.3px);
     height: 103px;
 }
 
-.custom-shape-divider-bottom-1652287650 .shape-fill {
+.custom-shape-divider-bottom-1652303210 .shape-fill {
     fill: var(--dark-blue-main);
 }
 //---------------------------------------about section-----------------------------------//
