@@ -6,3 +6,63 @@
         <li ><a class ="nav-bar__link" href = <%= pages_contactme_path%>>Get in Touch</a></li>
     </ul>
 </nav>
+
+
+
+<nav id ="nav-bar-mobile">
+    <div id="burgeer-menu">
+        <hr class = "burgeer">
+        <hr class = "burgeer">
+        <hr class = "burgeer">
+    </div>
+
+    <div id="mobile-menu-overlay" class = "hide">
+        <div id="burgeer-menu-overlay">
+            <hr class = "burgeer">
+            <hr class = "burgeer">
+            <hr class = "burgeer">
+        </div>
+        <ul id = "pop-up-nav" >
+            <li ><a class ="overlay-nav-bar__link" href = <%= root_path %>>Home</a></li>
+            <li ><a class ="overlay-nav-bar__link" href =<%= pages_aboutme_path%>>About Me</a></li>
+            <li ><a class ="overlay-nav-bar__link" href = <%=projects_show_path%>>Projects</a></li>
+            <li ><a class ="overlay-nav-bar__link" href = <%= pages_contactme_path%>>Get in Touch</a></li>
+        </ul>
+    </div>
+
+    <script>
+
+
+    window.onload = () =>{
+
+        const burgeerMenu= document.getElementById('burgeer-menu');
+        const burgeerMenuOverlay= document.getElementById('burgeer-menu-overlay');
+        const popUpNav= document.getElementById('pop-up-nav');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+
+    
+        burgeerMenu.addEventListener('click', () => {
+            if (mobileMenuOverlay.className == 'hide'){
+                mobileMenuOverlay.className ='show';
+                burgeerMenu.className  = 'opacity0';
+            } else{
+                mobileMenuOverlay.className ='hide';
+            
+            };
+        });
+        burgeerMenuOverlay.addEventListener('click', () => {
+            if (mobileMenuOverlay.className == 'show'){
+                mobileMenuOverlay.className ='hide';
+                burgeerMenu.className  = '';
+            } else{
+                mobileMenuOverlay.className ='show';
+
+            };
+        });
+    }
+
+    </script>
+
+
+</nav>
