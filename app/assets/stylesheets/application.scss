@@ -61,12 +61,14 @@ ul{
 .faded-text{
     font-family: "rock salt", cursive;
     color: var(--faded-text);
-    font-size: 2rem;
+    font-size: 1.2rem;
+    opacity: .2;
 }
 .faded-text-dark{
     font-family: "rock salt", cursive;
     color: var(--faded-text-dark);
-    font-size: 2rem;
+    font-size: 1.2rem;
+    opacity: .1;
 }
 .align-left{
     text-align: left;
@@ -269,54 +271,58 @@ hr.burgeer{
     
 }
 
-// #arrow1{
-//     border: solid var(--dark-blue-main);
-//     border-width: 0 .2rem .2rem 0;
-//     display: inline-block;
-//     padding: 2rem;
-//     animation: slidedown 3s infinite;
-//     position: absolute;
-//     bottom: 5rem;
+#arrow1{
+    border: solid var(--dark-blue-main);
+    border-width: 0 .2rem .2rem 0;
+    display: inline-block;
+    padding: 1.5rem;
+    animation: slidedown 3s infinite;
+    position: absolute;
+    bottom: 2rem;
     
     
-// }
+}
 
-// #arrow2{
-//     border: solid var(--light-blue-acc2);
-//     border-width: 0 .2rem .2rem 0;
-//     display: inline-block;
-//     padding: 2rem;
-//     animation: slidedown 3s infinite;
-//     position: absolute;
-//     bottom: 7rem;
+#arrow2{
+    border: solid var(--light-blue-acc2);
+    border-width: 0 .2rem .2rem 0;
+    display: inline-block;
+    padding: 1.25rem;
+    animation: slidedown 3s infinite;
+    position: absolute;
+    bottom: 3rem;
     
     
     
-// }
+}
 
 #arrow3{
     border: solid var(--white);
     border-width: 0 .2rem .2rem 0;
     display: inline-block;
-    padding: 2rem;
+    padding: 1rem;
     animation: slidedown 3s infinite;
     position: absolute;
-    bottom: 3rem;
+    bottom: 4rem;
     
-   
+    
+    
 }
 
-    @keyframes slidedown {
-        0%{
-            opacity: 0;
-            transform: rotate(45deg) translate(1rem, 1rem);
-        }
-        50%{
-            opacity: 1;
-        }
-        100%{
-            opacity: 0;
-            transform: rotate(45deg)  translate(1.5rem, 1.5rem);
+@keyframes slidedown {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(.3rem, .3rem) ;
+    
+    }
+    50%{
+        opacity: 1;
+
+        
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(1.5rem, 1.5rem);
         }
     }
 
@@ -324,7 +330,7 @@ hr.burgeer{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    min-width: 100%;
     max-width: 100%;
     overflow: hidden;
     line-height: 0;
