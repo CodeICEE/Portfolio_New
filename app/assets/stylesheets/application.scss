@@ -228,20 +228,20 @@ hr.burgeer{
     background-repeat: no-repeat;
     background-position: center center ;
     background-attachment: fixed;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     //justify-content: center;
     align-items: center;
     //padding: 0 1rem;
     
-}; 
+};  
 
 #hero-info{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20%;
+    //margin-top: 20%;
 }
 
 .hero-text{
@@ -349,7 +349,7 @@ hr.burgeer{
     font-family: "caveat", cursive;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     margin: auto;
     display: flex;
     justify-content: center;
