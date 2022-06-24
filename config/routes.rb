@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get   'pages/aboutme'
   get   'pages/contactme'
   get   'projects/show'
-  get   'projects/keyman'
+  get   'projects/mightylocksmith'
   get   'projects/portfolio'
   get   'projects/fafsa'
   
