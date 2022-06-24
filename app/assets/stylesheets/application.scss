@@ -17,26 +17,28 @@
 //---------------------custom colors-----------------------------//
 :root{
 
-        //--- colors-------//
+    //--- colors-------//
     --light-blue-acc: #e0ffff;
-    //--light-blue-acc2: #c0e6ff;
-    --light-blue-acc2: #000;
+    --light-blue-acc2: #c0e6ff;
+    //--light-blue-acc2: #000;
     --main-dark: #1d1d1d;
     //--main-dark: #5e71ab;
     --white: white;
     --off-white: wheat;
-    --faded-text: #ffffff36;
-    --faded-text-dark: #0f0f0f8e;
+    --faded-text: #ffffff6a;
+    --faded-text-dark: #0f0f0fad;
     --light-blue-acc-80opacity:#f0f8ffdc;
-    --light-blue-acc-80opacity:white;
+    //--light-blue-acc-80opacity:white;
 
 
 // -------------------- colors 2 ----//
     --clr-bg-color:#ffffff;
-    --clr-main-dark:#000000;
-    --clr-main-light:#ffffff;
+    --clr-main-dark:#151515;
+    --clr-main-light:#4a0404;
     --clr-acc-dark:#14125e;
-    --clr-acc-light:#403ca6;
+    --clr-acc-light:#c0e6ff;
+    --clr-acc-light-30:rgba(192, 230, 255, 0.302);
+
 
 
 
@@ -64,14 +66,14 @@ ul{
 
 .section-head{
     font-family: "caveat", cursive;
-    font-size: 3rem;
-    text-align: left;
+    font-size: 1.5rem;
+    text-align: right;
     text-transform: uppercase;
 }
 .section-text{
     font-size: 2rem;
     font-family: "oswald", cursive;
-    text-align: right;
+    text-align: left;
 }
 
 .faded-text{
@@ -144,6 +146,9 @@ ul{
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    //border: solid white 2px;
+    background-color: var(--clr-main-dark);
 }
 
 #nav-bar ul, #hero-nav-bar ul{
@@ -186,7 +191,7 @@ ul{
     border:  solid white 2px;
     border-radius: .4rem;
     padding: .5rem;
-    margin-top: 2rem;
+    margin: 1rem 0;
     cursor: pointer;
 }
 
@@ -268,19 +273,30 @@ hr.burgeer{
     background-repeat: no-repeat;
     background-position: center center ;
     background-attachment: fixed;
-    min-height: 50vh;
+    min-height: 97vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    //border: solid red 2px;
     
 };  
+
+#hero-info-container{
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    min-height: 100%;
+    //border: solid white 2px;
+    margin-top: 15rem;
+}
 
 #hero-info{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30%;
+    //margin-top: 30%;
 }
 
 .hero-text{
@@ -357,18 +373,18 @@ hr.burgeer{
 
 
 //---------------------------------------about section-----------------------------------//
-#about {
+#about-section{
     padding: 1.5rem;
     color: var(--white);
     font-family: "caveat", cursive;
     text-align: center;
     width: 100%;
     //height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    //margin: 0 auto;
+    //display: flex;
+    // justify-content: center;
+    // align-content: center;
+    // flex-direction: column;
 }
 #about h3{
     font-size: 5rem;
@@ -377,35 +393,36 @@ hr.burgeer{
 
 #about p span{
     font-family: "rock salt", cursive;
-    padding: 0 .5rem 0 0;
+    //padding: 0 .5rem 0 0;
     color: red;
 
 }
 
 //-----------------------------------projects section---------------------------------------//
 #projects-section{
-background-color: var(--light-blue-acc-80opacity);
-//padding: 1.5rem 1.5rem;
-font-family: "caveat", cursive;
+background-color: var(--clr-bg-color);
+padding: 1.5rem;
+font-family: "oswald", cursive;
 text-align: center;
 width: 100%;
 //margin: auto;
 position: relative;
-
-
 }
 
     .projects-container{
     display: grid;
-    gap: .5rem;
-}
-
+    gap: 2.5rem;
+    }
     .single-project{
-    width: 100%;
-    height: auto;
-    //margin: 1.5rem auto;
-}
+        width: 100%;
+        height: auto;
+        //margin: 1.5rem auto;
+        box-shadow: 0 4px 7px 0 rgba(0,0,0,0.2);
+        background-color:var(--clr-acc-light-30);
+        border-radius: .5rem;
+    }
 
+    
     .project-image{
     height: 30vh;
     width: 100%;
@@ -413,13 +430,15 @@ position: relative;
     display: block;
     text-decoration: solid;
     position: relative;
-}
+    }
 
     .project-title{
-        font-size: 2.5rem; 
+        font-size: 2rem; 
+        padding: .5rem;
     }
 
     .project-desc{
+        font-size: 1.5rem; 
         border-radius: 0 0 .4rem .4rem;
         //background-color: var(--light-blue-acc2);
         //background-image: linear-gradient(rgba(0, 0, 0, 0.657), rgb(0, 0, 0));
@@ -429,7 +448,7 @@ position: relative;
     .project-desc-text{
         width: 100%;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: black;
         padding: 0 .5rem;
     }
@@ -561,9 +580,9 @@ position: relative;
         background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg3.jpg");
     };  
     //---------------------------------------- about section media query------------------------------//
-    #about {
-        width: 70%;
-        height: 70vh;
+    #about-section{
+        width: 100%;
+        padding: 3rem 15%;
     }
     
     

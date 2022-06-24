@@ -1,28 +1,26 @@
 
-<section id="hero" class=>
+<section id="hero">
     <%= render"shared/heronav" %>
-    <div>
-    <div id="hero-info">
-        <h1 class="hero-text">Vladimir Joseph</h1>
-        <h1 class ="hero-subtext">Front-End web developer</h1>
-        <div id= "hero-buttons">
-            <button class="btn btn-custom-2" >resume</button>
-            <a href= <%= pages_contactme_path%> class="btn btn-custom-2">Get in touch!</a>
+    <div id="hero-info-container">
+        <div id="hero-info">
+            <h1 class="hero-text">Vladimir Joseph</h1>
+            <h1 class ="hero-subtext">Front-End web developer</h1>
+            <div id= "hero-buttons">
+                <button class="btn btn-custom-2" >resume</button>
+                <a href= <%= projects_show_path%> class="btn btn-custom-2">My Work</a>
+            </div>
         </div>
+        
     </div>
-    
-    </div>
-    
-    
-    <div id="arrow">
+    <%# <div id="arrow">
         <div id="arrow1"></div>
         <div id="arrow2"></div>
-    </div>
+    </div> %>
 </section>
 
-<section id="about">
+<section id="about-section">
     <p class="faded-text align-left"><</p>
-    <h2 class = "section-head">About Me</h2> 
+    <h2 class = "section-head"> - About Me - </h2> 
     <br>
  
     <p class="section-text">I’m a web developer based in Sunrise, Florida. 
@@ -37,13 +35,13 @@
 
     <p class="faded-text-dark align-left"> < </p>
 
-    <h2 class = "section-head">Projects</h2>
+    <h2 class = "section-head"> - My Latest Work - </h2>
     
     <div class="projects-container">
         <div class="single-project">
-            <h4 class="project-title">Keyman on Wheels</h4>
-            <a id="project-2" class="project-image"  href = <%= projects_keyman_path%>>
-                <p class ="project-overlay-cta-mobile mobile">Click for details...</p>
+            <h4 class="project-title">Mighty Locksmith LLC</h4>
+            <a id="project-2" class="project-image"  href = <%= projects_mightylocksmith_path%>>
+                <p class ="project-overlay-cta-mobile mobile">Tap for details...</p>
                 <div class="img-overlay">
                     <h6 class="project-desc-text">A buisness Website created for Keyman on Wheels LLC.</h6>
                     <p class = "project-overlay-cta-large">Click for more detais!</p> 
@@ -59,7 +57,7 @@
         <div class="single-project">
             <h4 class="project-title">FAFSA Boss</h4>
             <a id="project-3" class="project-image"  href =<%= projects_fafsa_path%>>
-                <p class ="project-overlay-cta-mobile mobile">Click for details...</p>
+                <p class ="project-overlay-cta-mobile mobile">Tap for details...</p>
                 <div class="img-overlay">
                     <h6 class="project-desc-text">A concept website for helping students with their FAFSA. Featuring CRUD functionality.</h6>
                     <p class = "project-overlay-cta-large">Click for more detais!</p> 
@@ -96,7 +94,7 @@
 
 <section id="skills-section">
     <p class="faded-text align-left"> < </p>
-    <h2 class = "section-head">Skills</h2>
+    <h2 class = "section-head"> - Skills - </h2>
     <div class="skills-container">
         <%= image_tag "skills-icons/HTML5_logo_and_wordmark.svg", alt: "logo icon for HTML5", class: "skill-logo" %>
         <%= image_tag "skills-icons/CSS3_logo_and_wordmark.svg", alt: "logo icon for CSS3", class: "skill-logo" %>
