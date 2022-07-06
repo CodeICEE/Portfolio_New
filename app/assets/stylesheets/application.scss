@@ -789,3 +789,55 @@ footer{
     }
 
 }
+                                                        // about page
+
+
+#about-main{
+    //display: grid;
+    color: var(--clr-bg-color);
+    //position: absolute;
+    text-align: center;
+    
+}
+#about-title-box{
+    margin-top: 0;
+    //border: solid green 2px;
+    background-color: #02020389;
+    width: 90%;
+    z-index: 2;
+    position: relative;
+    margin: 2rem auto;
+
+}
+
+#about-photo-bg{
+    max-width: 100%;
+    min-height: 80vh;
+    //border: solid blue 2px;
+    position: relative;
+    z-index: 1; 
+    object-fit: cover;  
+    top: -80px;
+    margin-bottom: -80px; 
+    
+}
+
+#about-text{
+    position: relative;
+    //border: solid red 2px;
+    background-color: #02020389;
+    z-index: 2;
+    width: 90%;
+    top: -30rem; 
+    right: 0px;
+    margin: auto;
+    padding: 1rem;
+    height: 300px;
+    margin-bottom: -30px;
+    display: block;
+
+}
+
+.clearfix{
+    overflow: auto;
+  }
