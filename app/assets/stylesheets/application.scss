@@ -736,7 +736,7 @@ footer{
 // #contact-icon{
 // }
 .contact-icon{
-    width: 20rem;
+    width: 10rem;
     margin: auto;
     margin-top: 1rem;
 }
@@ -752,7 +752,7 @@ footer{
 
 #map{
 
-    margin: 2rem auto -10rem auto;    
+    margin: 2rem auto -15rem auto;    
     width: 100%;
     height: 20rem;
     //border-radius: 2rem;
@@ -793,10 +793,11 @@ footer{
 
 
 #about-main{
-    //display: grid;
     color: var(--light-blue-acc2);
-    //position: absolute;
     text-align: center;
+    background-image: linear-gradient(#100d2771, #0f09378d),url("imgs/main-bg2.jpg");
+    background-size: cover;
+    background-position: center;
     
 }
 #about-title-box{
@@ -810,18 +811,19 @@ footer{
 }
 
 #about-photo-bg{
-    background-image: url("imgs/main-bg2.jpg");
     max-width: 100%;
     min-height: 80vh;
-    background-size: cover;
-    background-position: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 1.5rem 0;
     gap: .5rem;
     
 }
-
+.about-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
 #about-text{
     background-color: #030113db;
     width: 90%;
@@ -830,9 +832,38 @@ footer{
     text-align: justify;
     text-justify: inter-word;
     font-size: 1.1rem;
-
+}
+#about-pg-img-contatiner{
+    display: none;
+    max-width: 35vw;
+}
+#about-pg-img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 7px 0 rgba(0,0,0,0.8);
 }
 
+
+@media screen and (min-width: 1110px) {
+    #about-title-box{
+        margin: 5rem auto 0 auto;
+
+    }
+    #about-text{
+        margin: 5rem auto 0 auto;
+    }
+
+    #about-pg-img-contatiner{
+        display: block;
+        padding: 5rem;
+    }
+    #about-photo-bg{
+        max-width: 60%;
+        margin: auto;
+    }
+
+}
 
 
 
