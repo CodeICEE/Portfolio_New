@@ -1,7 +1,10 @@
 require_relative "boot"
 
 require "rails"
-# Pick the frameworks you want:
+
+# Pick the frameworks you want. Anything commented out is not loaded at all,
+# which keeps boot time and memory down. This app has no database, so
+# Active Record and everything that depends on it stays off.
 require "active_model/railtie"
 require "active_job/railtie"
 # require "active_record/railtie"
@@ -11,8 +14,7 @@ require "action_mailer/railtie"
 # require "action_mailbox/engine"
 # require "action_text/engine"
 require "action_view/railtie"
-require "action_cable/engine"
-require "sprockets/railtie"
+# require "action_cable/engine"
 require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -21,8 +23,13 @@ Bundler.require(*Rails.groups)
 
 module PortfolioNew
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    # Load the framework defaults for this Rails version. Bumping this number
+    # is what actually opts you in to new behaviour after an upgrade.
+    config.load_defaults 8.1
+
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -30,6 +37,5 @@ module PortfolioNew
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
