@@ -1,19 +1,16 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
+// This is the single Sass entry point for the app.
+//
+// dartsass-rails compiles this file into app/assets/builds/application.css,
+// and Propshaft then fingerprints that output and serves it. There is no
+// Sprockets manifest and no `require_tree` any more - if you add another
+// stylesheet, pull it in explicitly with `@use "filename";` at the top of
+// this file.
+//
+// Bootstrap is loaded as plain CSS from a CDN in app/views/layouts/
+// application.html.erb. This app only uses Bootstrap's Reboot resets plus
+// .btn/.btn-lg, none of its Sass variables or mixins, so there is nothing to
+// compile. See UPGRADE_NOTES.md if you want to bring it back in as a gem.
 
- */
-
- @import "bootstrap";
 //---------------------custom colors-----------------------------//
 :root{
 
@@ -285,7 +282,7 @@ hr.burgeer{
     position: relative;
     //border: solid red 2px;
     
-};  
+}
 
 #hero-info-container{
     display: flex;
@@ -583,7 +580,8 @@ position: relative;
     //----------------------------------------Hero image media query-------------------------------//
     #hero {
         background-image: linear-gradient( rgba(26, 6, 59, 0.726), rgba(0, 0, 0, 0.582)) , url("imgs/main-bg3.jpg");
-    };  
+    }
+
     //---------------------------------------- about section media query------------------------------//
     #about-section{
         width: 100%;
