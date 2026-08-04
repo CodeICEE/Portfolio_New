@@ -413,7 +413,7 @@ position: relative;
 
     .projects-container{
     display: grid;
-    gap: 2.5rem;
+    gap: 1rem;
     }
     .single-project{
         width: 100%;
@@ -435,7 +435,7 @@ position: relative;
     }
 
     .project-title{
-        font-size: 2rem; 
+        font-size: 300px; 
         padding: .5rem;
     }
 
@@ -538,7 +538,7 @@ position: relative;
 }
 
 .skill-logo{
-    width: 100px;
+    width: 50px;
     margin: .5rem .75rem;
 }
 
@@ -621,7 +621,8 @@ position: relative;
     }
     
     .project-title{
-        font-size: clamp(2rem, 2.5vw, 4rem);  
+        //font-size: clamp(1.5rem, 24px, 4rem); 
+        font-size:24px; 
     }
     .img-overlay{
         display: flex;
@@ -637,7 +638,7 @@ position: relative;
         padding: 3rem 15%;
     }
     .skill-logo{
-        width: 150px;
+        width: 75px;
     }
     
 }
@@ -669,6 +670,7 @@ footer{
     //border: solid red 2px;
     align-items: center;
     margin: 0 .5rem ;
+    gap: 12px;
 }
 
 
