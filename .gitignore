@@ -22,6 +22,7 @@
 # `assets:precompile`; Heroku regenerates them on every deploy.
 /public/assets
 
+
 # Ignore CSS built by dartsass-rails. This is generated output, not source.
 /app/assets/builds/*
 !/app/assets/builds/.keep

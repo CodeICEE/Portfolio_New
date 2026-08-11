@@ -1,36 +1,68 @@
 
-<section id="hero">
-    <%= render"shared/heronav" %>
-    <div id="hero-info-container">
-        <div id="hero-info">
-            <h1 class="hero-text">Vladimir Joseph</h1>
-            <h1 class ="hero-subtext">Front-End web developer</h1>
-            <div id= "hero-buttons">
-                <%= link_to "Resume", "/Vladimir_Joseph_Resume_2026_no_contact.pdf", :target => "_blank", class: "btn btn-custom-2"%>
-                <%# <button class="btn btn-custom-2" onclick="window.location.href='app/assets/Vladimir_Joseph_Resume-2.pdf';">resume</button> %>
-                <!-- <a href= <%= projects_show_path%> class="btn btn-custom-2">My Work</a> -->
+<section id="hero" >
+<div class="content-column">
+    <div class="content-column-inner">
+        <%= render"shared/heronav" %>
+        <div id="hero-info-container">
+            <div class="hero-info hero-left" >
+                <p class="hero-alert">open to front-end roles · remote or Central FL</p>
+                <h1 class="hero-text">Vladimir<br>Joseph</h1>
+                <h2 class ="hero-subtext">Front-End web developer</h2>
+                <p class="hero-desc"> Four years turning designer handoffs — Figma and Adobe XD — into responsive, maintainable front-ends with HTML, CSS, JavaScript, and WordPress. </p>
+                <div id= "hero-buttons">
+                <!-- Two different ways to do buttons in RoR -->
+                <%= link_to "./resume.pdf", "/Vladimir_Joseph_Resume_2026_no_contact.pdf", :target => "_blank", class: "btn btn-custom-2"%>
+                <a href= <%= projects_show_path%> class="btn btn-custom-2">./view-work</a>
+                </div>
+            </div>
+            <div class="hero-info hero-right">
+                <div id="hero-stack">
+                    <div class="hero-stack-top">
+                        <div class="stack-browser-buttons-wrapper">
+                            <div class="stack-browser-button"></div>
+                            <div class="stack-browser-button"></div>
+                            <div class="stack-browser-button"></div>
+                        </div>
+                        <p>stack.rb</p>
+                    </div>
+                    <div class="hero-stack-main">
+                        <p> 
+                            <p><span class="stack-li">1</span> <span class="stack-highlight">def</span> stack </p>
+                            <p><span class="stack-li">2</span> <span class="muted-text">build: [</span>"HTML", "CSS", "JavaScript"<span class="muted-text">],</span></p>
+                            <p><span class="stack-li">3</span> <span class="muted-text">server: [</span>"Ruby on Rails", "WordPress"<span class="muted-text">],</span></p>
+                            <p><span class="stack-li">4</span> <span class="muted-text">ship: [</span>"Git", "GitHub"],</p>
+                            <p><span class="stack-li">5</span> <span class="muted-text">design: [</span>"Affinity Designer", "Photoshop"<span class="muted-text">]</span></p>
+                            <p><span class="stack-li">6</span> <span class="stack-highlight">end</span></p>
+                        </p>
+                    </div>
+                    <div class="hero-stack-bottom">
+                        <p>→ 4 years professional · 3 shipped projects</p>
+                    </div>
+
+                </div>
             </div>
         </div>
-        
     </div>
+</div>
     <%# <div id="arrow">
         <div id="arrow1"></div>
         <div id="arrow2"></div>
     </div> %>
 </section>
 
-<section id="about-section">
-    <p class="faded-text align-left"><</p>
-    <h2 class = "section-head"> - About Me - </h2> 
-    <br>
- 
-    <p class="section-text">I’m a web developer based in Florida. 
-     I create beautiful and modern 
-    websites with user-centered design. 
-    <%# I would love to bring my passion to <span><em>your</em></span> team!</p> %>
-    <p class="faded-text align-right" >/ ></p>
-
-</section>
+<!-- <section id="about-section">
+     <div class="content-column">
+         <div class="content-column-inner">
+             <p class="faded-text align-left"><</p>
+             <h2 class = "section-head"> - About Me - </h2> 
+             <br>
+        
+             <p class="section-text"> Four years at an agency turning designer handoffs into responsive, maintainable front-ends
+             <%# I would love to bring my passion to <span><em>your</em></span> team!</p> %>
+             <p class="faded-text align-right" >/ ></p>
+         </div>
+     </div>
+ </section> -->
 
 <section id="projects-section">
 
