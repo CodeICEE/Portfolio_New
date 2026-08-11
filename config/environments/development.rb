@@ -15,6 +15,9 @@ Rails.application.configure do
   # Add Server-Timing headers so you can see where request time goes in devtools.
   config.server_timing = true
 
+config.assets.compile = true
+config.assets.debug = true
+
   # Action Controller caching is off by default. Run `rails dev:cache` to toggle.
   if Rails.root.join("tmp/caching-dev.txt").exist?
     config.action_controller.perform_caching = true
