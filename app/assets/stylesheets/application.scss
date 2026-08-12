@@ -450,8 +450,11 @@ p.hero-alert::before{
 }
 
 @keyframes trails{
-    0%{transform: translateY(0%);}
-    100%{transform: translateY(600%);}
+    0%{transform: translateY(-150px); opacity: 1;}
+    35%{ opacity: .1;}
+    50%{opacity:1;}
+    75%{opacity: .1;}
+    100%{transform: translateY(100%); opacity: 1;}
 }
 
 #hero-stack{
@@ -460,15 +463,15 @@ p.hero-alert::before{
 }
 #stack-scanner{
    // opacity: .3;
-    height: 100px;
+    height: 100%;
     width: 100%;
-    top: -100px;
+    top: 0;
     left: 0;
     position: absolute;
-    background: linear-gradient(#4c5397, transparent );
+    background: linear-gradient(#4c5397, transparent 90px);
     transition: all .25s;
     pointer-events: none !important;
-    animation: trails 6s ease-in-out infinite;
+    animation: trails 6s linear infinite;
 }
 .stack-browser-buttons-wrapper{
     display: flex;
