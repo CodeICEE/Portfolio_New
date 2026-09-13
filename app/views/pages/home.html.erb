@@ -1,4 +1,4 @@
-
+<main>
 <section id="hero" >
 <div class="content-column">
     <div class="content-column-inner">
@@ -11,8 +11,8 @@
                 <p class="hero-desc"> Four years turning designer handoffs — Figma and Adobe XD — into responsive, maintainable front-ends with HTML, CSS, JavaScript, and WordPress. </p>
                 <div id= "hero-buttons">
                 <!-- Two different ways to do buttons in RoR -->
-                <%= link_to "./resume.pdf", "/Vladimir_Joseph_Resume_2026_no_contact.pdf", :target => "_blank", class: "btn btn-custom-2"%>
-                <a href= <%= projects_show_path%> class="btn btn-custom-2">./view-work</a>
+                <%= link_to "./resume.pdf", "/Vladimir_Joseph_Resume_2026_no_contact.pdf", :target => "_blank", class: "btn btn-custom-2" %>
+                <!-- <a href= <%= projects_show_path%> class="btn btn-custom-2">./view-work</a> -->
                 </div>
             </div>
             <div class="hero-info hero-right">
@@ -52,68 +52,53 @@
     </div> %>
 </section>
 
-
-
 <section id="projects-section">
-
-    <p class="faded-text-dark align-left"> < </p>
-
+<div class="content-column">
+    <div class="content-column-inner">
     <h2 class = "section-head"> Things I've Shipped </h2>
-    
-    <div class="projects-container">
-        <div class="single-project">
-            <h4 class="project-title">Mighty Locksmith LLC</h4>
-            <div id="project-2" class="project-image"  href = <%= projects_mightylocksmith_path%>>
-                <%# <p class ="project-overlay-cta-mobile mobile">Tap for details...</p> %>
-                <div class="img-overlay">
-                    <h6 class="project-desc-text">A buisness Website created for Mighty Locksmith LLC. Built with Wordpress and some custom html and css.</h6>
-                    <%# <p class = "project-overlay-cta-large">Click for more detais!</p>  %>
-                </div>
-            </div>
+        <div class="projects-container">
+            <div class="single-project">
+                <a href=<%= projects_mightylocksmith_path%>>
+                    <div id="project-2" class="project-image"></div>
+                    <div class="project-data">
+                        <p class="project-tools-used"> Wordpress &middot; HTML/CSS</p>
+                        <h3 class="project-title">Mighty Locksmith LLC</h3>
+                        <p class="project-desc mobile">A buisness Website created for Mighty Locksmith LLC. Built with Wordpress and some custom html and css.</p>
+                                              <%#  <a href="https://www.mightylocksmith.com" target="blank" class="btn btn-lg btn-custom-1">View Site</a> %>
 
-            <div class="project-desc">
-                <p class="project-desc-text mobile">A buisness Website created for Mighty Locksmith LLC. Built with Wordpress and some custom html and css.</p>
-                <%# <a href="https://www.mightylocksmith.com" target="blank" class="btn btn-lg btn-custom-1">View Site</a> %>
+                    </div>
+                </a>
             </div>
-        </div>
-
-        <div class="single-project">
-            <h4 class="project-title">FafsaLAb</h4>
-            <div id="project-3" class="project-image"  href =<%= projects_fafsa_path%>>
-                <%# <p class ="project-overlay-cta-mobile mobile">Tap for details...</p> %>
-                <div class="img-overlay">
-                    <h6 class="project-desc-text">A concept website for helping students with their FAFSA featuring CRUD functionality. Built with ruby/ruby on rails.</h6>
-                    <%# <p class = "project-overlay-cta-large">Click for more detais!</p>  %>
-                </div>
+            <div class="single-project">
+                <a href=<%= projects_fafsa_path%>>
+                    <div id="project-3" class="project-image"></div>
+                    <div class="project-data">
+                        <p class="project-tools-used"> Ruby on Rails &middot; CRUD &middot; Git &middot; Github</p>
+                        <h3 class="project-title">FafsaLAB</h3>
+                        <p class="project-desc mobile">A concept website for helping students with their FAFSA featuring CRUD functionality. Built with ruby/ruby on rails.</p>
+                        <p class="project-links">
+                            <a href="https://github.com/CodeICEE/FAFSA-Like-a-Boss" target="blank">Code</a>,
+                            <a href="https://www.youtube.com/watch?v=yeB8iAmddJk" target="blank">Demo</a>
+                        </p>
+                    </div>
+                </a>
             </div>
-
-            <div class="project-desc">
-                <p class="project-desc-text mobile">A concept website for helping students with their FAFSA featuring CRUD functionality. Built with ruby/ruby on rails.</p>
-                <a href="https://github.com/CodeICEE/FAFSA-Like-a-Boss" target="blank" class="btn btn-lg btn-custom-1">View Code</a>
-                <a href="https://www.youtube.com/watch?v=yeB8iAmddJk" target="blank" class="btn btn-lg btn-custom-1">View Presentation</a>
-            </div>
-        </div>
-
-        <div class="single-project">
-            <h4 class="project-title">My Portfolio</h4>
-            <div id="project-1" class="project-image"  href = <%= projects_portfolio_path %>>
-                <%# <p class ="project-overlay-cta-mobile mobile">Tap for details...</p> %>
-                <div class="img-overlay">
-                    <h6 class="project-desc-text">This portfolio website made to display my work and skills. Built with Ruby/Ruby on rails. HTML, CSS, and Javascript. </h6>
-                    <%# <p class = "project-overlay-cta-large">Click for more detais!</p> %>
-                </div>
-            </div>
-
-            <div class="project-desc">
-                <p class="project-desc-text mobile">This portfolio website made to display my work and skills. Built with Ruby/Ruby on rails. HTML, CSS, and Javascript.</p>
-                <a href="https://github.com/CodeICEE/Portfolio_New" target="blank" class="btn btn-lg btn-custom-1">View Code</a>
+            <div class="single-project">
+                <a href=<%= projects_portfolio_path%>>
+                    <div id="project-1" class="project-image"></div>
+                    <div class="project-data">
+                        <p class="project-tools-used"> Ruby on Rails &middot; Html &middot; Css &middot; Git &middot; Github</p>
+                        <h3 class="project-title">Portfolio</h3>
+                        <p class="project-desc mobile">This portfolio website made to display my work and skills. Built with Ruby/Ruby on rails. HTML, CSS, and Javascript. </p>
+                        <p class="project-links">
+                            <a href="https://github.com/CodeICEE/Portfolio_New" target="blank">Source on Github</a>,
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
-    </div>
-
-    <p class="faded-text-dark align-right"> / > </p>
-    <br>
-
+    </div >
+</div >
 </section>
 
 <section id="skills-section">
@@ -137,4 +122,5 @@
 <section id="contact">
 
 </section>
+</main>
 
